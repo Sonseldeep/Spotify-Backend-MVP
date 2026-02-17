@@ -1,6 +1,8 @@
 const express = require('express');
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/auth.routes");
+const musicRoutes = require("./routes/music.routes");
+
 const cors = require("cors");
 
 
@@ -17,6 +19,7 @@ app.use("/api/home", (req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/music", musicRoutes);
 
 
 
